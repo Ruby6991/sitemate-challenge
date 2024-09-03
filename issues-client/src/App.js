@@ -27,15 +27,9 @@ function App() {
     loadIssues();
   };
 
-  const handleEdit = async (issue) => {
-    if (editing) {
-      await updateIssue(editing.id, newIssue);
-    } else {
-      await setNewIssue(issue);
-      await setEditing(issue);
-    }
-    setNewIssue({ title: "", description: "" });
-    setEditing(null);
+  const handleEdit = (issue) => {
+    setNewIssue(issue);
+    setEditing(issue);
     loadIssues();
   };
 
