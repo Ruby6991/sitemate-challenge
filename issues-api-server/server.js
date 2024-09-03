@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use("/api", issuesRoutes);
+app.use("/api/issues", issuesRoutes);
 app.get("/", (req, res) => res.send("Welcome to the Issues API!"));
 
 // Start the server
