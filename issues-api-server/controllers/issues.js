@@ -10,7 +10,7 @@ let issues = [
 export const getIssues = (req, res) => {
   console.log(`Current Issues: ${issues}`);
 
-  res.send(issues);
+  res.json(issues);
 };
 
 // Create a new issue
